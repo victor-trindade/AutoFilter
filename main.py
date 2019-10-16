@@ -1,23 +1,25 @@
-from Modules import modulos
+import os
 import pandas as pd
+from Modules import modulos
 
 
-
-
-while True:
-    print('-=' * 30)
-    resposta = str(input('1 - IMPORTAR UMA NOVA PLANILHA\n2 - EXIBIR ARQUIVO\n* - SAIR DO PROGRAMA\n|' ))
-    print('-=' * 30)
-    if resposta == '1':
-       x = modulos.choose_file()
-    elif resposta == '2':
-        table = modulos.show_choosen_file(x)
-        print(table)
-    elif resposta =='*':
-        break
-        
-
-
+def x():
+    while True:
+        print('-=' * 60)
+        resposta = str(input('1 - IMPORTAR UMA NOVA PLANILHA\n2 - EXIBIR ARQUIVO\n* - SAIR DO PROGRAMA\n|' ))
+        print('-=' * 60)
+        if resposta == '1':
+            os.system('cls' if os.name == 'nt' else 'clear')
+            x = modulos.choose_file()
+        elif resposta == '2':
+            os.system('cls' if os.name == 'nt' else 'clear')
+            table = modulos.show_choosen_file(x)
+            print(table)
+        elif resposta =='*':
+            break
+            
+x()
+print('saiu')
 # def read_file():
 #     y = str(open_file())
 #     if y.endswith('xlsx'):

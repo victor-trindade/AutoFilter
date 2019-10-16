@@ -1,4 +1,4 @@
-import os
+
 import pandas as pd
 import tkinter as tk
 from tkinter import filedialog as fd, Tk
@@ -11,5 +11,8 @@ def choose_file():
     return str(file)
 
 def show_choosen_file(file):
-    table = pd.read_excel(file)
+    if file.endswith('xlsx'):
+        table = pd.read_excel(file)
+    elif file.endswith('csv'):
+        table = pd.read_csv(file)
     return(table)
