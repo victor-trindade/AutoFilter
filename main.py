@@ -3,7 +3,7 @@ import pandas as pd
 from Modules import modulos
 
 
-def x():
+def run():
     while True:
         print('-=' * 60)
         resposta = str(input('1 - IMPORTAR UMA NOVA PLANILHA\n2 - EXIBIR ARQUIVO\n* - SAIR DO PROGRAMA\n|' ))
@@ -18,7 +18,7 @@ def x():
         elif resposta =='*':
             break
             
-x()
+run()
 print('saiu')
 # def read_file():
 #     y = str(open_file())
