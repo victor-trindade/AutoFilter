@@ -13,13 +13,17 @@ def run():
             x = modulos.choose_file()
         elif resposta == '2':
             os.system('cls' if os.name == 'nt' else 'clear')
-            table = modulos.show_choosen_file(x)
-            print(table)
+            try:
+                table = modulos.show_choosen_file(x)
+                print(table)
+            except:
+                return print('Você não selecionou nenhum arquivo!')
+
         elif resposta =='*':
             break
             
 run()
-print('saiu')
+print('-= VOLTE SEMPRE =-')
 # def read_file():
 #     y = str(open_file())
 #     if y.endswith('xlsx'):

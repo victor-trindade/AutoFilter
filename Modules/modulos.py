@@ -15,4 +15,7 @@ def show_choosen_file(file):
         table = pd.read_excel(file)
     elif file.endswith('csv'):
         table = pd.read_csv(file)
-    return(table)
+    try:
+        return(table)
+    except:
+        print('Não foi possivel abri o arquivo selecionado')
