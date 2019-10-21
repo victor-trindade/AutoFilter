@@ -9,7 +9,7 @@ def choose_file():
     file = fd.askopenfilename(initialdir=path.expanduser("~/Desktop"))
     return file
 
-def show_choosen_file(file):
+def display_choosen_file(file):
     if file.endswith('xlsx'):
         table = pd.read_excel(file)
     elif file.endswith('csv'):
@@ -20,7 +20,7 @@ def show_choosen_file(file):
         print('Não foi possivel abri o arquivo selecionado')
 
 def filter_list(dataframe):
-    return list(dataframe)
+    filter = list(dataframe).columns
 
 def filtrar(table, f1, f2):
     a = table[f1] == f2

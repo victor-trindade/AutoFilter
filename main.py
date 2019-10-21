@@ -1,7 +1,9 @@
 import os
 import pandas as pd
 from Modules import modulos
-
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
 import operator
 
 def run():
@@ -15,18 +17,27 @@ def run():
         elif resposta == '2':
             os.system('cls' if os.name == 'nt' else 'clear')
             try:
-                print(modulos.show_choosen_file(x))
+                print(modulos.display_choosen_file(x))
                 
             except:
                 return print('Você não selecionou nenhum arquivo!')
         elif resposta == '3':
             os.system('cls' if os.name == 'nt' else 'clear')
-            c = modulos.filter_list(dataframe=modulos.show_choosen_file(x).columns)
-            for i in c:
-                print(f'{c.index(i)} - {i}')
-            opt = int(input('Digite o numero da coluna a ser filtrada: '))
-            print(modulos.show_choosen_file(x)[c[opt]])
+            # c = modulos.filter_list(dataframe=modulos.display_choosen_file(x))
+            # for i in c:
+            #     print(f'{c.index(i)} - {i}')
+            #     adnetrindade @ hotmail.com
+            # reposta2 = input()
+            # opt = int(input('Digite o numero da coluna a ser filtrada: '))
+            # a = list(modulos.display_choosen_file(x)[c[opt]])
+            # os.system('cls' if os.name == 'nt' else 'clear')
+            # for i in a:
+            #     print(f'{a.index(i)} - {i}')
+            # opt2 = int(input('Digite o valor da linha a ser filtrada: '))
 
+            # os.system('cls' if os.name == 'nt' else 'clear')
+            # a = modulos.display_choosen_file(x)[c[opt]] == a[opt2]
+            # print(modulos.display_choosen_file(x)[a])
         elif resposta =='*':
             break
             
